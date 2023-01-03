@@ -1,0 +1,466 @@
+{
+	"info": {
+		"_postman_id": "36a1b997-5b02-4b68-b922-2d5e926c1780",
+		"name": "Devsu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2866937"
+	},
+	"item": [
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "Get All Clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{IP}}:{{PORT}}/v1/clients",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Client by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{IP}}:{{PORT}}/v1/clients/4",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"v1",
+								"clients",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jhener García\",\r\n    \"gender\": \"MALE\",\r\n    \"age\": 29,\r\n    \"personalId\": \"245789614587963\",\r\n    \"address\": \"Guatemala City\",\r\n    \"phone\": \"+50259448648\",\r\n    \"password\": \"Pa$$w0rd\",\r\n    \"state\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:{{PORT}}/v1/clients",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Client by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jhener García\",\r\n    \"gender\": \"MALE\",\r\n    \"age\": 29,\r\n    \"personalId\": \"245789614587963\",\r\n    \"address\": \"Guatemala City\",\r\n    \"phone\": \"+50259448648\",\r\n    \"password\": \"Pa$$w0rd\",\r\n    \"state\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:{{PORT}}/v1/clients/4",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"v1",
+								"clients",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Client by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://{{IP}}:{{PORT}}/v1/clients/4",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"v1",
+								"clients",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "Get All Accounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{IP}}:{{PORT}}/v1/accounts",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"v1",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Account by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{IP}}:{{PORT}}/v1/accounts/1",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"v1",
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Account by Number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{IP}}:{{PORT}}/v1/accounts/by-number/225487",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"v1",
+								"accounts",
+								"by-number",
+								"225487"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Accounts by Personal ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{IP}}:{{PORT}}/v1/accounts/by-personal-id/354981984",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"v1",
+								"accounts",
+								"by-personal-id",
+								"354981984"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client\": {\r\n        \"id\": 1\r\n    },\r\n    \"number\": \"48969874\",\r\n    \"type\": \"AHORRO\",\r\n    \"balance\": 2000.00,\r\n    \"state\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:{{PORT}}/v1/accounts",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"v1",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Account by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client\": {\r\n        \"id\": 1\r\n    },\r\n    \"number\": \"478758\",\r\n    \"type\": \"AHORRO\",\r\n    \"balance\": 20000.00,\r\n    \"state\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP}}:{{PORT}}/v1/accounts/1",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"v1",
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Account by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://{{IP}}:{{PORT}}/v1/accounts/1",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"v1",
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transactions",
+			"item": [
+				{
+					"name": "Get All Transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{IP}}:{{PORT}}/v1/transactions",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"v1",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Transactions by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{IP}}:{{PORT}}/v1/transactions/1",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"v1",
+								"transactions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Transactions by Account Number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{IP}}:{{PORT}}/v1/transactions/by-account/225487",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"v1",
+								"transactions",
+								"by-account",
+								"225487"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Transactions by Personal ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{IP}}:{{PORT}}/v1/transactions/by-personal-id/354981985",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"v1",
+								"transactions",
+								"by-personal-id",
+								"354981985"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://{{IP}}:{{PORT}}/v1/transactions?accountNumber=225487&amount=10000",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"v1",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "accountNumber",
+									"value": "225487"
+								},
+								{
+									"key": "amount",
+									"value": "10000"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "Generate Report",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{IP}}:{{PORT}}/v1/reports/by-account?accountNumber=225487&dateFrom=2020-01-02T00:00:00&dateTo=2023-01-02T23:59:59",
+							"protocol": "http",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"v1",
+								"reports",
+								"by-account"
+							],
+							"query": [
+								{
+									"key": "accountNumber",
+									"value": "225487"
+								},
+								{
+									"key": "dateFrom",
+									"value": "2020-01-02T00:00:00"
+								},
+								{
+									"key": "dateTo",
+									"value": "2023-01-02T23:59:59"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
